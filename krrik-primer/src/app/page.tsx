@@ -41,12 +41,14 @@ export default function Home() {
         </section>
         <section id="WhyK'rrik" className="py-16 md:py-24 lg:py-32 px-5 flex flex-col md:flex-row items-start mt-80 gap-8">
           <div className="flex-1">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">WHY K&apos;RRIK</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">WHY K&apos;RRIK?</h2>
             <p className="text-lg md:text-xl text-gray-300 text-justify">
               I have many reasons as to why I had wanted and love to play K&apos;rrik. Firstly, its that core mechanic of Phyrexian mana which is <span className="font-bold">paying life</span> instead.
-              That mechanic cheats out so much mana for me.
+              That mechanic cheats out so much mana for me. Paying life for black pips frees up your lands and rocks to be used for <span className="font-bold">ONLY</span> generic mana. Meaning, should we get our constant land drop by turn 5, bring K&apos;rrik into play, we essentially have manipulated our mana curve to be way ahead over our base, and our opponents.
               <br></br><br></br>
-              jasbd
+              Secondly, and more personally, I have always considered myself as someone that understands the weight of sacrifice. I understand that life is simply a resource to be spent. It is something I can neglect if it means I can get what I want, capture what I want. That has been true for my academic life, so much so that people know I am frontrunning a carry job, they also know that it comes at a cost. I have understood that cost, and I live with it.
+              <br></br><br></br>
+              Life is something one will have to sacrifice.
 
             </p>
           </div>
