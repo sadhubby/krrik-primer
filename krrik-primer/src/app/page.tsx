@@ -1,6 +1,6 @@
 import Image from "next/image";
-// import { useEffect, useState } from "react";
-import ScrollIndicator from "./scrollIndicator";
+import ScrollIndicator from "./components/scrollIndicator";
+import CardGallery from "./components/cardGallery";
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           <ScrollIndicator />
         </section>
-        <section id="Introduction" className="py-16 md:py-24 lg:py-32 px-5 flex flex-col items-center justify-center mt-80">
+        <section id="Introduction" className="py-16 md:py-24 lg:py-32 px-5 flex flex-col items-center justify-center mt-80 gap-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-center">
               INTRODUCTION
@@ -38,8 +38,11 @@ export default function Home() {
               This primer will also discuss <span className="font-bold">must have cards, gameplay and strategies, combo lines and statistics</span> on my deck for K&apos;rrik, Son of Yawgmoth.
             </p>
           </div>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl lg:text-xl text-gray-300 text-justify font-bold">TAGS: Bracket 3, cEDH, Budget, Self-Damage, Life Gain</p>
+          </div>
         </section>
-        <section id="WhyK'rrik" className="py-16 md:py-24 lg:py-32 px-5 flex flex-col md:flex-row items-start mt-80 gap-8">
+        <section id="WhyK'rrik" className="py-16 md:py-24 lg:py-32 px-5 flex flex-col md:flex-row items-start mt-40 gap-8">
           <div className="flex-1 pl-5">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">WHY K&apos;RRIK?</h2>
             <p className="text-lg md:text-xl text-gray-300 text-justify">
@@ -48,13 +51,13 @@ export default function Home() {
               <br></br><br></br>
               Secondly, and more personally, I have always considered myself as someone that understands the weight of sacrifice. I understand that life is simply a resource to be spent. It is something I can neglect if it means I can get what I want, capture what I want. That has been true for my academic life, so much so that people know I am frontrunning a carry job, they also know that it comes at a cost. I have understood that cost, and I live with it.
               <br></br><br></br>
-              Life is something one will have to sacrifice.
+              <span className="italic">For business, I&apos;ve learned you have to pay a high price. Sometimes that price is everything. <br></br>Tommy Shelby</span>
 
             </p>
           </div>
           <div className="flex-1 relative h-120 md:h-120">
             <Image
-              src="/post.jpg" // Replace with your actual image path
+              src="/post.jpg"
               alt="Why choose K'rrik"
               fill
               className="object-cover rounded-2xl"
@@ -84,7 +87,11 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section id="musthaves">
+        <section id="musthaves" className="py-16 mt-40">
+          <h2 className="text-4xl md:text-6xl font-bold mb-18 text-center">
+            MUST HAVE CARDS
+          </h2>
+          <CardGallery />
         </section>
       </main>
     </div>
