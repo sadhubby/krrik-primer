@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ScrollIndicator from "./components/scrollIndicator";
 import CardGallery from "./components/cardGallery";
+import ManaCurve from "./components/manaCurve";
 
 export default function Home() {
   return (
@@ -87,11 +88,18 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section id="musthaves" className="py-16 mt-40">
+        <section id="deck" className="py-16 pr-20 pl-20 mt-40">
           <h2 className="text-4xl md:text-6xl font-bold mb-18 text-center">
-            MUST HAVE CARDS
+            THE DECK
           </h2>
           <CardGallery />
+        </section>
+        <section id="deck" className="py-16 mt-40">
+          <h2 className="text-4xl md:text-6xl font-bold mb-18 text-center">
+            MANA CURVE
+          </h2>
+          <ManaCurve />
+
         </section>
       </main>
     </div>
