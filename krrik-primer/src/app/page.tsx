@@ -125,7 +125,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-start gap-8 p-6 rounded-2xl shadow-lg">
 
               <p className="text-lg md:text-xl flex-1 leading-relaxed text-justify">
-                Though K&apos;rrik cheats out so much mana, he still cannot cheat out generic mana. To reiterate, K&apos;rrik can only cheat black mana on spells and abilities. As such, we need a way to cheat out ALL mana. Thankfully, we have a someone for that job, Blood Celebrant
+                Though K&apos;rrik cheats out so much mana, he still cannot cheat out generic mana. To reiterate, K&apos;rrik can only cheat black mana on spells and abilities. As such, we need a way to cheat out ALL mana. Thankfully, we have a someone for that job, Blood Celebrant.
                 More than that, we also have one more artifact besides Sol Ring and Arcane Signet that will make sure we can lessen the amount of mana we need to cheat, making all spells be earlier on the curve, Jet Medallion.
                 Bolas&apos;s Citadel also provides more cheating power into this deck because you can just play topdeck and pay with life instead.
               </p>
@@ -157,9 +157,20 @@ export default function Home() {
                 <CardGetter query="Offer Immortality" />
               </div>
             </div>
+
             <div className="flex flex-col md:flex-row items-start gap-8 p-6 rounded-2xl shadow-lg">
               <p className="text-lg md:text-xl flex-1 leading-relaxed text-justify">
-                Now here is our prime finisher, Gray, Merchant of Asphodel.
+                Now here is our prime finisher, Gray, Merchant of Asphodel. Gray takes life dependent on the amount of black pips in total that are present on our board. In a 1v1, this card is really strong to drain and get that life advantage when you get to late game.
+                But in a full pod commander, this card is broken.
+
+                <br></br><br></br>
+                You gain <span className="font-bold">THRICE</span> the healing, then suddenly, you are back at full health. Let&apos;s say you have 12 black pips (including Gray). You gain a total of 36 life. You have not gotten to your combat yet but you essentially have a new turn because of the amount of life you&apos;ve gained.
+                <br></br><br></br>
+                With that, you always want ways for your Gray ETB to trigger. The best possible scenario is also have Ayara, First of Lochtwain in the battlefield to serve as your sac outlet.
+                This way, Gray will die and enter the graveyard zone. However, we will use Undying Malice or Not Dead After All so that instead of it entering graveyard, it goes back instantly into the battlefield, triggering the ETB.
+
+                <br></br><br></br>
+                When we do not have those cards anymore, though, which is quite likely, we can instead use Chainer, Dementia Master to bring back Gray. The good thing about it is that you can trigger Chainer&apos;s ability. The better thing about it is that we can pay the abililty cost with K&apos;rrik. THe best thing about it is that when you do have at least 5 pips, you gain a net positive and can keep killing Gray and reviving with Chainer.
               </p>
               <div className="flex flex-row gap-4 flex-wrap justify-center md:justify-start flex-1">
                 <CardGetter query="Gray Merchant of Asphodel" />
@@ -167,11 +178,47 @@ export default function Home() {
                 <CardGetter query="Chainer, Dementia Master" />
                 <CardGetter query="Undying Malice" />
                 <CardGetter query="Not Dead After All" />
+                <CardGetter query="Power Word Kill" />
+                <CardGetter query="Murder" />
+                <CardGetter query="Diabolic Edict" />
+                <CardGetter query="Kaya's Ghostform" />
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-start gap-8 p-6 rounded-2xl shadow-lg">
+              <p className="text-lg md:text-xl flex-1 leading-relaxed text-justify">
+                This is a very funny combo. Note that Lich&apos;s Mastery is not needed till lategame due to its third sentence.
+                The funny combo is that you keep paying life for Greed&apos;s ability because of K&apos;rrik. So you keep calling out <span className="italic">1A! 1A! 1A! 1A! 1A!1A!1A!1A!</span> to the entire table until you are low in life. Then bring out Repay in Kind. Make them pay for not allowing you to heal up. Now, it simply is a matter of playing your hand with the cards you have pulled with Greed. More likely than not, you will have some immediate life gains available to you.
+              </p>
+              <div className="flex flex-row gap-4 flex-wrap justify-center md:justify-start flex-1">
+                <CardGetter query="Repay in Kind" />
+                <CardGetter query="Greed" />
+                <CardGetter query="Lich's Mastery" />
               </div>
             </div>
           </div>
         </section>
+        <section id="cardupgrades" className="py-16 px-12 mt-40">
+          <h2 className="text-4xl md:text-6xl font-bold mb-18 text-center">
+            CARD UPGRADES
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl lg:text-xl text-gray-300 text-center">
+              Currently, to be filled as there are no possible upgrades yet in sight and in budget
+            </p>
+          </div>
+        </section>
+        <section id="cardupgrades" className="py-16 px-12 mt-40">
+          <h2 className="text-4xl md:text-6xl font-bold mb-18 text-center">
+            FUTURE BUILDS
+          </h2>
+          <div className="flex flex-row gap-8 mt-40 p-16 flex-wrap justify-center md:justify-ceter flex-1 scale-175">
+            <CardGetter query="Flubs, the Fool" />
+            <CardGetter query="Giada, Font of Hope" />
+            <CardGetter query="Yshtola, Night's Blessed" />
+          </div>
+        </section>
+
       </main>
-    </div>
+    </div >
   );
 }
