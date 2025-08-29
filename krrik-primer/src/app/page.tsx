@@ -2,6 +2,7 @@ import Image from "next/image";
 import ScrollIndicator from "./components/scrollIndicator";
 import CardGallery from "./components/cardGallery";
 import ManaCurve from "./components/manaCurve";
+import CardGetter from "./components/cardGetter";
 
 export default function Home() {
   return (
@@ -94,12 +95,81 @@ export default function Home() {
           </h2>
           <CardGallery />
         </section>
-        <section id="deck" className="py-16 mt-40">
+        <section id="curve" className="py-16 mt-40">
           <h2 className="text-4xl md:text-6xl font-bold mb-18 text-center">
             MANA CURVE
           </h2>
           <ManaCurve />
 
+        </section>
+        <section id="setupscombosstrats" className="py-16 px-12 mt-40">
+          <h2 className="text-4xl md:text-6xl font-bold mb-18 text-center">
+            SETUPS, COMBOS, & STRATEGIES
+          </h2>
+
+          <div className="flex flex-col gap-16">
+            <div className="flex flex-col md:flex-row items-start gap-8 p-6 rounded-2xl shadow-lg">
+
+              <p className="text-lg md:text-xl flex-1 leading-relaxed text-justify">
+                There are many strategies available with this deck. But the main idea
+                you need to remember is that K&apos;rrik is the most important piece to
+                have. Make sure that you get K&apos;rrik out when possible. Be careful,
+                because as soon as he&apos;s on the battlefield, you become the table&apos;s
+                biggest threat.
+              </p>
+
+              <div className="flex flex-row gap-4 flex-wrap justify-center md:justify-start flex-1">
+                <CardGetter query="K'rrik, Son of Yawgmoth" />
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-start gap-8 p-6 rounded-2xl shadow-lg">
+
+              <p className="text-lg md:text-xl flex-1 leading-relaxed text-justify">
+                Though K&apos;rrik cheats out so much mana, he still cannot cheat out generic mana. To reiterate, K&apos;rrik can only cheat black mana on spells and abilities. As such, we need a way to cheat out ALL mana. Thankfully, we have a someone for that job, Blood Celebrant
+                More than that, we also have one more artifact besides Sol Ring and Arcane Signet that will make sure we can lessen the amount of mana we need to cheat, making all spells be earlier on the curve, Jet Medallion.
+                Bolas&apos;s Citadel also provides more cheating power into this deck because you can just play topdeck and pay with life instead.
+              </p>
+              <div className="flex flex-row gap-4 flex-wrap justify-center md:justify-start flex-1">
+                <CardGetter query="Blood Celebrant" />
+                <CardGetter query="Jet Medallion" />
+                <CardGetter query="Bolas's Citadel" />
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-start gap-8 p-6 rounded-2xl shadow-lg">
+
+              <p className="text-lg md:text-xl flex-1 leading-relaxed text-justify">
+                Should you need to protect K&apos;rrik, or make sure he is constantly in the battlefield, you can use these cards to make sure constant uptime.
+                <br></br><br></br>
+                <span className="font-bold">Note: Swiftfoot Boots is currently NOT in the deck</span>
+                <br></br>
+                Whispersilk Cloak and Swiftfoot Boots gives K&apos;rrik permanent protection as they are artifacts. However, do note the difference between Hexproof and Shroud. Shroud protects the creature even from yourself. Meaning K&apos;rrik cannot be the target of any spells or abilities from you.
+                Which by all means, is not really anything bad. Another good thing about Whispersilk Cloak is the fact that K&apos;rrik cannot be blocked. This is very good to gain back some life with his lifelink and also to stack commander damage as the game goes on.
+                <br></br><br></br>
+                The other three are spells that you can use SHOULD both artifacts not be available at a time of need. Though they are better used later for better strategies, making sure K&apos;rrik is constantly on the battlefield is still a net positive even with the loss of a spell.
+              </p>
+
+              <div className="flex flex-row gap-4 flex-wrap justify-center md:justify-start flex-1">
+                <CardGetter query="Whispersilk Cloak" />
+                <CardGetter query="Swiftfoot Boots" />
+                <CardGetter query="Undying Malice" />
+                <CardGetter query="Not Dead After All" />
+                <CardGetter query="Offer Immortality" />
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-start gap-8 p-6 rounded-2xl shadow-lg">
+              <p className="text-lg md:text-xl flex-1 leading-relaxed text-justify">
+                Now here is our prime finisher, Gray, Merchant of Asphodel.
+              </p>
+              <div className="flex flex-row gap-4 flex-wrap justify-center md:justify-start flex-1">
+                <CardGetter query="Gray Merchant of Asphodel" />
+                <CardGetter query="Ayara, First of Locthwain" />
+                <CardGetter query="Chainer, Dementia Master" />
+                <CardGetter query="Undying Malice" />
+                <CardGetter query="Not Dead After All" />
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
