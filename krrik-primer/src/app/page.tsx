@@ -1,8 +1,11 @@
+import type { Metadata } from 'next';
 import Image from "next/image";
 import ScrollIndicator from "./components/scrollIndicator";
 import CardGallery from "./components/cardGallery";
 import ManaCurve from "./components/manaCurve";
 import CardGetter from "./components/cardGetter";
+
+export const metadata: Metadata = { title: "K'rrik Primer" };
 
 export default function Home() {
   return (
