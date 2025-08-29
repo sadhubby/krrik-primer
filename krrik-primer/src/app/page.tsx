@@ -5,7 +5,7 @@ import CardGallery from "./components/cardGallery";
 import ManaCurve from "./components/manaCurve";
 import CardGetter from "./components/cardGetter";
 
-export const metadata: Metadata = { title: "K'rrik Primer" };
+export const metadata: Metadata = { title: "K'rrik Primer by: moonberry" };
 
 export default function Home() {
   return (
