@@ -60,7 +60,7 @@ export default function Home() {
 
             </p>
           </div>
-          <div className="flex-1 relative h-120 md:h-120">
+          <div className="flex-1 relative h-120 md:h-150">
             <Image
               src="/post.jpg"
               alt="Why choose K'rrik"
