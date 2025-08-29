@@ -11,7 +11,13 @@ interface ScryfallCard {
   card_faces?: Array<{ image_uris?: { normal: string; large: string } }>;
 }
 
-export default function CardDisplay({ query }: { query: string }) {
+export default function CardDisplay({
+  query,
+  linkOverride
+}: {
+  query: string;
+  linkOverride?: string
+}) {
   const [card, setCard] = useState<ScryfallCard | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -24,7 +30,6 @@ export default function CardDisplay({ query }: { query: string }) {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 
-        // pick the right image (normal or card_faces)
         let imageUrl = data.image_uris?.normal;
         if (!imageUrl && data.card_faces?.length > 0) {
           imageUrl = data.card_faces[0].image_uris?.normal;
@@ -58,12 +63,15 @@ export default function CardDisplay({ query }: { query: string }) {
   if (!card) {
     return (<div className="text-gray-400">Loading {query}...</div>);
   }
+
   const imageUrl =
     card.image_uris?.normal || card.card_faces?.[0]?.image_uris?.normal;
 
+  const href = linkOverride ?? card.scryfall_uri;
+
   return (
     <a
-      href={card.scryfall_uri}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="inline-block"
@@ -84,3 +92,5 @@ export default function CardDisplay({ query }: { query: string }) {
     </a>
   );
 }
+
+
