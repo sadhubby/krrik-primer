@@ -211,10 +211,11 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl font-bold mb-18 text-center">
             FUTURE BUILDS
           </h2>
-          <div className="flex flex-row gap-8 mt-40 p-16 flex-wrap justify-center md:justify-ceter flex-1 scale-175">
+          <div className="flex flex-row gap-8 mt-40 p-16 flex-wrap justify-center md:justify-ceter flex-1 scale-150">
             <CardGetter query="Flubs, the Fool" />
             <CardGetter query="Giada, Font of Hope" />
             <CardGetter query="Yshtola, Night's Blessed" />
+            <CardGetter query="Kellan the Kid" />
           </div>
         </section>
 
